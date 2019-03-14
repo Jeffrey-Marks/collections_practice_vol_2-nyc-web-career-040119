@@ -45,6 +45,20 @@ def count_elements(array)
 end
 
 
-def merge_data(hash1, hash2)
-  
+def merge_data(keys, data)
+  merged_data = [{},{}]
+
+  data[0]["blake"].each do |key, value|
+    merged_data[0][:first_name] = "blake"
+    merged_data[0][key] = value
+    merged_data[0][:motto] = keys[0][:motto]
+  end
+
+  data[0]["ashley"].each do |key, value|
+    merged_data[1][:first_name] = "ashley"
+    merged_data[1][key] = value
+    merged_data[1][:motto] = keys[1][:motto]
+  end
+
+  merged_data
 end
