@@ -179,3 +179,5 @@ describe 'collections practice vol 2.' do
   end
 
 end
+
+puts merged_data
