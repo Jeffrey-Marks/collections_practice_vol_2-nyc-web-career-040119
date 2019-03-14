@@ -62,3 +62,8 @@ def merge_data(keys, data)
 
   merged_data
 end
+
+
+def find_cool()
+  
+end
