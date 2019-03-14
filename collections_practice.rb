@@ -64,6 +64,14 @@ def merge_data(keys, data)
 end
 
 
-def find_cool()
-  
+def find_cool(cool)
+  output = []
+
+  for person in cool
+    if person[:temperature] == "cool"
+      output.push(person)
+    end
+  end
+
+  output
 end
