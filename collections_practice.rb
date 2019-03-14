@@ -78,5 +78,16 @@ end
 
 
 def organize_schools(schools)
-  
+  organized = {}
+
+  schools.each do |key, value|
+    if !organized[value[:location]]
+      organized[value[:location]] = []
+      organized[value[:location]].push(key)
+    else
+      organized[value[:location]].push(key)
+    end
+  end
+
+  organized
 end
