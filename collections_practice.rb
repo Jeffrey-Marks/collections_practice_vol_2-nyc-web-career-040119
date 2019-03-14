@@ -33,12 +33,13 @@ def count_elements(array)
     num = array[(i..-1)].select do |x|
       x == array[i]
     end.length
-    
-    array[i][:count] = num
-    
-    array[(i+1..-1)].delete_if do |x|
+
+    array = array[(0..i)] + array[(i+1..-1)].delete_if do |x|
       x == array[i]
     end
+
+    array[i][:count] = num
     i += 1
   end
+  array
 end
